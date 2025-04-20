@@ -1,58 +1,86 @@
 {
-    "Title": "Campus Life on the West Side",
-    "Credits": "Created by Adam Smith (amsmith@ucsc.edu).",
-    "InitialLocation": "Kresge",
+    "Title": "Welcome to the Summoners Rift",
+    "Credits": "Created by ivli",
+    "InitialLocation": "Blue Base",
     "Locations": {
-        "Kresge": {
-            "Body": "This is Kresge College, lots of nice trees.",
-            "Choices": [
-                {
-                    "Text": "South",
-                    "Target": "Porter"
-                }
-            ]
-        },
-        "Porter": {
-            "Body": "This is Porter College, the trees are nice here too.",
-            "Choices": [
-                {
-                    "Text": "North",
-                    "Target": "Kresge"
-                },
-                {
-                    "Text": "South",
-                    "Target": "Rachel Carson"
-                }
-            ]
-        },
-        "Rachel Carson": {
-            "Body": "Rachel Carson College, more sun and fewer trees.",
-            "Choices": [
-                {
-                    "Text": "North",
-                    "Target": "Porter"
-                },
-                {
-                    "Text": "South",
-                    "Target": "Oakes"
-                }
-            ]
-        },
-        "Oakes": {
-            "Body": "Oakes College, even the buildings have tree bark on them.",
-            "Choices": [
-                {
-                    "Text": "North",
-                    "Target": "Rachel Carson"
-                },
-                {
-                    "Text": "South",
-                    "Target": "Beyond"
-                }
-            ]
-        },
-        "Beyond": {
-            "Body": "Grass, don't forget to check for ticks!"
-        }
+      "Blue Base": {
+        "Body": "This is the Blue Team's Base, defend the Nexus at all costs!",
+        "Choices": [
+          { "Text": "Shop", "Target": "Shop" },
+          { "Text": "Top", "Target": "Top Lane" },
+          { "Text": "Mid", "Target": "Mid Lane" },
+          { "Text": "Bottom", "Target": "Bot Lane" }
+        ]
+      },
+      "Red Base": {
+        "Body": "This is the Red Team's Base, take their Nexus and end the game!<br>It appears to be tough, an item from the shop should be enough to crack it!",
+        "Choices": [
+          {
+            "Text": "Strike Nexus with Long Sword!",
+            "Target": "Red Nexus",
+            "RequiresItem": "LongSword"
+          },
+          { "Text": "Top", "Target": "Top Lane" },
+          { "Text": "Mid", "Target": "Mid Lane" },
+          { "Text": "Bottom", "Target": "Bot Lane" }
+        ]
+      },
+      "Mid Lane": {
+        "Body": "This is the Mid Lane, center of the map and the most direct path to a fight.",
+        "Choices": [
+          { "Text": "Top", "Target": "Top River" },
+          { "Text": "Bot", "Target": "Bot River" },
+          { "Text": "Base", "Target": "Blue Base" },
+          { "Text": "Enemy Base", "Target": "Red Base" }
+        ]
+      },
+      "Top Lane": {
+        "Body": "This is the Top Lane, home to isolated fights and a true test of strength.",
+        "Choices": [
+          { "Text": "Mid", "Target": "Top River" },
+          { "Text": "Base", "Target": "Blue Base" },
+          { "Text": "Enemy Base", "Target": "Red Base" }
+        ]
+      },
+      "Top River": {
+        "Body": "The Top River, home to void monsters and the local river crab.",
+        "Choices": [
+          { "Text": "Top", "Target": "Top Lane" },
+          { "Text": "Mid", "Target": "Mid Lane" },
+          { "Text": "Fish in the river", "Target": "Fishing Spot" }
+        ]
+      },
+      "Fishing Spot": {
+        "Body": "You cast your line into the river...",
+        "Scene": "FishingScene"
+      },
+      "Bot Lane": {
+        "Body": "This is the Bot Lane, a duel of the duos.",
+        "Choices": [
+          { "Text": "Mid", "Target": "Bot River" },
+          { "Text": "Base", "Target": "Blue Base" },
+          { "Text": "Enemy Base", "Target": "Red Base" }
+        ]
+      },
+      "Bot River": {
+        "Body": "The Bot River, home to the elemental drakes.<br>There goes the river crab!",
+        "Choices": [
+          { "Text": "Chase the Scuttle Crab!", "Target": "Scuttle Encounter" },
+          { "Text": "Mid", "Target": "Mid Lane" },
+          { "Text": "Bot", "Target": "Bot Lane" }
+        ]
+      },
+      "Scuttle Encounter": {
+        "Body": "You see the river crab! It scuttles away quickly.",
+        "Scene": "CatchScuttleScene"
+      },
+      "Shop": {
+        "Body": "Welcome to the Shop!<br>Here you can purchase items to make you stronger!",
+        "Scene": "ShopScene"
+      },
+      "Red Nexus": {
+        "Body": "+50g<br>Good Game!"
+      }
     }
-}
+  }
+  

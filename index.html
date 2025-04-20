@@ -5,9 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
+
+    <style>
+        
+        #image-container img {
+            position: fixed;
+            top: 0;
+            right: 0;
+            max-height: 90vh;
+            max-width: 40vw;
+            transform: scale(2);
+            transform-origin: top right;
+        }
+    </style>
+    </style>
+
     <script src="engine.js"></script>
     <script src="rules.js"></script>
 </head>
 <body>
+    <div id="image-container">
+        <img src="https://static.wikia.nocookie.net/leagueoflegends/images/0/04/Summoner%27s_Rift_Minimap.png" alt="Persistent Image" />
+    </div>
 </body>
 </html>
